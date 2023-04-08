@@ -8,14 +8,14 @@ const BLOG = {
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: 2021, // e.g if leave this empty, current year will be used.
-  APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
+  APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'auto', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
 
   CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // 支持Menu 类型，从3.12.0版本起，各主题将逐步支持灵活的二级菜单配置，替代了原来的Page类型，此配置是试验功能、默认关闭。
 
-  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'NotionNext', // 您的昵称 例如 tangly1024
-  BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://tangly1024.com', // 网站地址
-  KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客', // 网站关键词 英文逗号隔开
+  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'ccrcm-staff', // 您的昵称 例如 tangly1024
+  BIO: process.env.NEXT_PUBLIC_BIO || 'staff', // 作者简介
+  LINK: process.env.NEXT_PUBLIC_LINK || '', // 网站地址
+  KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客, ccrcm, 意大利, 米兰, 华人, 复兴, 教会 ', // 网站关键词 英文逗号隔开
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
   CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', // 邮箱地址 例如mail@tangly1024.com
   CONTACT_WEIBO: process.env.NEXT_PUBLIC_CONTACT_WEIBO || '', // 你的微博个人主页
@@ -108,24 +108,24 @@ const BLOG = {
   WIDGET_PET_SWITCH_THEME: true, // 点击宠物挂件切换博客主题
 
   // 音乐播放插件
-  MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || false, // 是否使用音乐播放插件
+  MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || true, // 是否使用音乐播放插件
   MUSIC_PLAYER_VISIBLE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_VISIBLE || true, // 是否在左下角显示播放和切换，如果使用播放器，打开自动播放再隐藏，就会以类似背景音乐的方式播放，无法取消和暂停
   MUSIC_PLAYER_AUTO_PLAY: process.env.NEXT_PUBLIC_MUSIC_PLAYER_AUTO_PLAY || true, // 是否自动播放，不过自动播放时常不生效（移动设备不支持自动播放）
   MUSIC_PLAYER_SHOW_LRC: process.env.NEXT_PUBLIC_MUSIC_PLAYER_SHOW_LRC || false, // 是否展示歌词（前提是有配置歌词路径，对 meting 无效）
   MUSIC_PLAYER_CDN_URL: process.env.NEXT_PUBLIC_MUSIC_PLAYER_CDN_URL || 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js',
-  MUSIC_PLAYER_ORDER: process.env.NEXT_PUBLIC_MUSIC_PLAYER_ORDER || 'list', // 默认播放方式，顺序 list，随机 random
+  MUSIC_PLAYER_ORDER: process.env.NEXT_PUBLIC_MUSIC_PLAYER_ORDER || 'random', // 默认播放方式，顺序 list，随机 random
   MUSIC_PLAYER_AUDIO_LIST: [ // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
     {
-      name: '风を共に舞う気持ち',
+      name: '【十架的愛 Great Is Your Love】官方歌詞版MV (Official Lyrics MV) - 讚美之泉敬拜讚美 ',
       artist: 'Falcom Sound Team jdk',
-      url: 'https://music.163.com/song/media/outer/url?id=731419.mp3',
-      cover: 'https://p2.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+      url: 'https://www.youtube.com/watch?v=dfVQ2nbrPnM',
+      cover: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fan%2FdfVQ2nbrPnM%2F14862444504929273359_mq.jpg%3Fv%3D60304c2a&tbnid=XUtKt8_LTx-WKM&vet=12ahUKEwjozabU5pr-AhUj7rsIHSAkC4AQMyhEegQIARBg..i&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdfVQ2nbrPnM&docid=eQiYdH62Io68RM&w=300&h=300&q=%E5%8D%81%E6%9E%B6%E7%9A%84%E7%88%B1%20zanmei&hl=it&client=firefox-b-d&ved=2ahUKEwjozabU5pr-AhUj7rsIHSAkC4AQMyhEegQIARBg'
     },
     {
-      name: '王都グランセル',
-      artist: 'Falcom Sound Team jdk',
-      url: 'https://music.163.com/song/media/outer/url?id=731355.mp3',
-      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+      name: '',
+      artist: '',
+      url: '',
+      cover: ''
     }
   ],
   MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // 是否要开启 MetingJS，从平台获取歌单。会覆盖自定义的 MUSIC_PLAYER_AUDIO_LIST，更多配置信息：https://github.com/metowolf/MetingJS
@@ -218,17 +218,17 @@ const BLOG = {
   },
 
   // RSS
-  ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || true, // 是否开启RSS订阅功能
+  ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || false, // 是否开启RSS订阅功能
 
   // 作废配置
   AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
   TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // 站点标题 ，被notion中的页面标题覆盖
   HOME_BANNER_IMAGE: process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || './bg_image.jpg', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
-  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个由NotionNext生成的站点', // 站点描述，被notion中的页面描述覆盖
+  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '这是为ccrcm收集的主日崇拜+信息的博客', // 站点描述，被notion中的页面描述覆盖
 
   // 网站图片
   IMG_URL_TYPE: process.env.NEXT_PUBLIC_IMG_TYPE || 'Notion', // ['Notion','AMAZON'] 站点图片前缀 默认 Notion:(https://notion.so/images/xx) ， AMAZON(https://s3.us-west-2.amazonaws.com/xxx)
-  IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || false, // 文章图片是否自动添加阴影
+  IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || true, // 文章图片是否自动添加阴影
 
   // 开发相关
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
